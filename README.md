@@ -1,8 +1,6 @@
 #Summary
-In no more than 4 sentences, briefly introduce your data visualization and add any context that can help readers understand it.
-
 This scatterplot presents flight delay data from http://www.transtats.bts.gov/OT_Delay/OT_DelayCause1.asp, and shows that arrival delays depend on the volume of traffic and the carrier. The average delay, which is the delay divided by the total number of flights for a given delay reason, is plotted against the total number of flights for that delay reason. Each point represents a different airport, with average delay additionally averaged over the 12 months of 2014 and the total number of flights summed over the same 12 months. An interactive legend enables different carriers to be selected or deselected, and different failure reasons can be chosen from a pull-down menu.
-Design
+#Design
 Explain any design choices you made including changes to the visualization after collecting feedback.
 
 Initially I produced a stacked barchart, but then realized that it was not explanatory (did not show a trend or relationship) as the project requires. I then chose to produce a scatterplot of the data, as it was the most appropriate chart for showing a relationship between the flight delay and flight count variables. This relationship was found after doing EDA in R. R was also used to pre-process the data to calculate an average delay (divide total delay by the number of flights for a particular airport and month) and reshape the data for plotting with dimplejs. This reshaped data is in a file called 2014_airline_delay_ct_reshaped.csv.
